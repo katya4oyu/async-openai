@@ -1688,7 +1688,7 @@ pub struct CreateTranscriptionResponse {
     pub task: Option<String>,
     pub language: Option<String>,
     pub duration: Option<f64>,
-    pub segments: Option<Vec<TranscriptSegment>>
+    pub segments: Option<Vec<TranscriptSegment>>,
 }
 
 #[derive(Debug, Deserialize, Clone, Serialize)]
@@ -1701,15 +1701,10 @@ pub struct TranscriptSegment {
     pub tokens: Option<Vec<u16>>,
     pub temperature: Option<f32>,
     pub avg_logprob: Option<f32>,
-    pub compression_rattio: Option<f32>,
+    pub compression_ratio: Option<f32>,
     pub no_speech_prob: Option<f32>,
     pub transient: Option<bool>,
-    // verbose_json
-    pub task: Option<String>,
-    pub language: Option<String>,
-    pub duration: Option<String>,
 }
-
 
 #[derive(Clone, Default, Debug, Builder, PartialEq, Serialize)]
 #[builder(name = "CreateSpeechRequestArgs")]

@@ -71,6 +71,8 @@ pub enum Role {
     #[default]
     User,
     Assistant,
+    /// Model is used by Gemini API
+    Model,
     Tool,
     Function,
 }
